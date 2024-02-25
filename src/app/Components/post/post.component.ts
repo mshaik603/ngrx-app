@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { PostService } from '../../Services/post-service.service';
 import { PostModel } from '../../Models/post.model';
+import { Store } from '@ngrx/store';
+import { addToCart, removeFromCart } from 'src/app/store/cart.action';
 
 @Component({
   selector: 'app-post',
@@ -10,7 +12,7 @@ import { PostModel } from '../../Models/post.model';
 export class PostComponent implements OnInit {
 
   longText: string = 'Test';
-  constructor(private postService: PostService) {}
+  constructor(private postService: PostService, private store: Store) {}
   postList: PostModel[] = [];
   ngOnInit() {
     this.getPosts();
@@ -23,6 +25,15 @@ export class PostComponent implements OnInit {
         this.postList = data;
       }
     });
+  }
+test(){
+  console.log('test')
+}
+  addToCart(){
+    this.store.dispatch(addToCart({msg:'Item added to cart'}));
+  }
+  removeFromCart(){
+    this.store.dispatch(removeFromCart({msg:'Item removed from cart'}));
   }
 
 }

@@ -10,6 +10,9 @@ import { FooterComponent } from './Components/footer/footer.component';
 import { UserComponent } from './Components/user/user.component';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { StoreModule } from '@ngrx/store';
+import { cartReducer } from './store/cart.reducer';
+import { AddItemComponent } from './Components/add-item/add-item.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +20,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     PostComponent,
     HeaderComponent,
     FooterComponent,
-    UserComponent
+    UserComponent,
+    AddItemComponent
     
   ],
   imports: [
@@ -25,7 +29,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AppRoutingModule,
     MaterialModule,
     HttpClientModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    StoreModule.forRoot({cartCount: cartReducer}, {})
   ],
   exports:[MaterialModule],
   providers: [],

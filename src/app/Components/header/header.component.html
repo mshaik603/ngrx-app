@@ -3,6 +3,7 @@
   <div class="menu">
     <span routerLinkActive="active" [routerLink]="['post']">Post</span>
     <span routerLinkActive="active" [routerLink]="['user']">User</span>
+    <span>{{cartCount | async}}</span>
   </div>
 
   <span class="example-spacer"></span>
