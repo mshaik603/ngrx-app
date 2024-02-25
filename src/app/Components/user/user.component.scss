@@ -1,0 +1,12 @@
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    // justify-content: ;
+    align-items: center;
+}
+.example-card {
+    max-width: 400px;
+    margin: 2%;
+    background-color: lightcyan !important;
+    color: black;
+  }

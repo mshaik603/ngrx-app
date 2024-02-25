@@ -1,0 +1,22 @@
+.example-spacer {
+    flex: 1 1 auto;
+  }
+  .menu{
+    display: flex;
+    margin: 1%;
+    padding: 1%;
+    span{
+      margin-left: 2%;
+      padding: 10%;
+      cursor: pointer;
+    }
+    span:hover{
+      text-decoration: underline;
+      color: blue;
+    }
+  }
+
+  .sticky{
+    position: sticky;
+    width: 100%;
+  }

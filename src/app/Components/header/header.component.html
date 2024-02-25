@@ -1,0 +1,15 @@
+<mat-toolbar class="sticky" color="primary">
+  <h1>My App</h1>
+  <div class="menu">
+    <span routerLinkActive="active" [routerLink]="['post']">Post</span>
+    <span routerLinkActive="active" [routerLink]="['user']">User</span>
+  </div>
+
+  <span class="example-spacer"></span>
+  <button mat-icon-button class="example-icon favorite-icon">
+    <mat-icon>favorite</mat-icon>
+  </button>
+  <button mat-icon-button class="example-icon">
+    <mat-icon>share</mat-icon>
+  </button>
+</mat-toolbar>
