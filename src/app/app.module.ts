@@ -30,7 +30,7 @@ import { AddItemComponent } from './Components/add-item/add-item.component';
     MaterialModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    StoreModule.forRoot({cartCount: cartReducer}, {})
+    StoreModule.forRoot({cart: cartReducer})
   ],
   exports:[MaterialModule],
   providers: [],

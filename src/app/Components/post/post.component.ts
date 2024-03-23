@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { PostService } from '../../Services/post-service.service';
 import { PostModel } from '../../Models/post.model';
 import { Store } from '@ngrx/store';
-import { addToCart, removeFromCart } from 'src/app/store/cart.action';
+import { addToCart } from 'src/app/store/cart.action';
 
 @Component({
   selector: 'app-post',
@@ -29,11 +29,12 @@ export class PostComponent implements OnInit {
 test(){
   console.log('test')
 }
-  addToCart(){
-    this.store.dispatch(addToCart({msg:'Item added to cart'}));
+  addToCart(post:any){
+    debugger;
+    this.store.dispatch(addToCart(post));
   }
   removeFromCart(){
-    this.store.dispatch(removeFromCart({msg:'Item removed from cart'}));
+    // this.store.dispatch(removeFromCart({msg:'Item removed from cart'}));
   }
 
 }
